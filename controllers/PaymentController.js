@@ -84,7 +84,7 @@ class PaymentController {
             }),
             customer: customer.id,  //-->In Stripe sab sa phela customer create hota ha phr ham customer object sa id access krsktay hai
             mode: 'payment',
-            success_url: `${process.env.CLIENT}/orders?session_id={CHECKOUT_SESSION_ID}`,  //-->If Payment Succes redirect to user url with session_id, here session_id={CHECKOUT_SESSION_ID} is stripe built-in varibale
+            success_url: `${process.env.CLIENT}/user?session_id={CHECKOUT_SESSION_ID}`,  //-->If Payment Succes redirect to user url with session_id, here session_id={CHECKOUT_SESSION_ID} is stripe built-in varibale
             cancel_url: `${process.env.CLIENT}/cart`, //-->If Payment Cancel redirect to cart url
         });
 
